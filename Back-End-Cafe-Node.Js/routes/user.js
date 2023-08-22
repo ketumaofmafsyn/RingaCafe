@@ -86,7 +86,7 @@ router.post('/forgotPassword', (req, res) => {
         var mailOptions = {
           from: process.env.EMAIL,
           to: results[0].email,
-          subject: 'password by Cafe Management system',
+          subject: 'password by Ringa Cafe Management system',
           html: '<p><b>Your Log in Details for Ringa Cafe Management system</b><b>Email:</b>' + results[0].email + '<br><b>Password: </b>' + results[0].password + '<br><a href="http://localhost:4200/">Click here to Login</a></p>'
         };
         transporter.sendMail(mailOptions, function (error, info) {
